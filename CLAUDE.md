@@ -1,0 +1,84 @@
+# claude-debate
+
+A project for implementing psychological approaches as Claude Code skills and comparing which method produces the most efficient and valuable debate.
+
+## Rules
+
+- Participant personas: `.claude/rules/personas.md`
+- Debate best practices and evaluation criteria: `.claude/rules/debate-rules.md`
+
+## Skills
+
+### Debate Approaches
+| Command | Approach |
+|---------|----------|
+| `/socratic` | Socratic Method |
+| `/dialectic` | Dialectic Method |
+| `/six-hats` | Six Thinking Hats |
+| `/steelmanning` | Steelmanning |
+| `/open-dialogue` | Open Dialogue |
+| `/motivational-interviewing` | Motivational Interviewing |
+| `/narrative` | Narrative Approach |
+
+### Session Management
+| Command | Role |
+|---------|------|
+| `/debate` | Run a full debate session end-to-end (single session) |
+| `/experiment` | **Run controlled experiment series via agents** (recommended for comparison) |
+| `/facilitate` | Moderate and chair the debate session |
+| `/conclude` | Synthesize the debate into a rational conclusion |
+| `/minutes` | Record the debate using the minutes template |
+
+## Agent Architecture
+
+```
+/experiment
+  └── series-runner agent  (1 per series, parallel across series)
+        └── debate-runner agent  (1 per run, sequential within series)
+              → saves minutes/YYYY-MM-DD-<series>-<id>.md
+```
+
+- `debate-runner`: clean context per run — no cross-session contamination
+- `series-runner`: collects scores, generates comparison table
+- Agents defined in `.claude/agents/`
+
+## Workflow
+
+**Single session:**
+```
+/debate "Does remote work improve productivity?"
+```
+
+**Controlled experiment:**
+```
+/experiment A "Does remote work improve productivity?"
+/experiment A B "Does AI threaten democracy?"
+/experiment all "Should capital punishment be abolished?"
+/experiment A-3 "Is climate action an individual responsibility?"
+```
+
+```
+/experiment <series> "<topic>"
+    └── series-runner agent
+          └── debate-runner agent × runs
+                → minutes/YYYY-MM-DD-<series>-<id>.md
+          → minutes/YYYY-MM-DD-series-<series>-comparison.md
+```
+
+## Templates
+
+- Minutes template: `.claude/templates/minutes.md`
+- Completed minutes: `.claude/minutes/YYYY-MM-DD-<topic-slug>.md`
+
+## Experiment Design
+
+- Controlled experiments: `.claude/rules/experiments.md`
+- Change **one variable at a time** against the fixed baseline
+- Series A (approach) → B (expertise) → C (stakes) → D (power) → E (enneagram) → F (big five)
+- Minutes naming: `minutes/YYYY-MM-DD-<series>-<id>.md`
+
+## Principles
+
+- Skills define behavior only — no configuration or evaluation criteria inside skill files.
+- Participant settings and evaluation criteria are managed in rule files.
+- Run multiple approaches on the same topic to enable direct comparison.
