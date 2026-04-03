@@ -3,7 +3,7 @@ name: experiment
 description: |
   Use this skill to run one or more experiment series from the controlled experiment design.
   Triggers: "run experiment", "実験を走らせて", "series A を実行", "全シリーズ実行",
-  or when the user wants to compare debate approaches or variable effects using the controlled design in experiments.md.
+  or when the user wants to compare debate approaches or variable effects using the controlled design in experiments.md#experiment-series.
 argument-hint: <series> "<topic>"
 ---
 
@@ -11,7 +11,7 @@ argument-hint: <series> "<topic>"
 
 ## Overview
 
-Entry point for the experiment system. Reads the experiment definition from `.claude/rules/experiments.md`, spawns a `series-runner` agent for each requested series, and collects results. Each series runs all its variants through isolated `debate-runner` agents, ensuring clean context per run.
+Entry point for the experiment system. Reads the experiment definition from `experiments.md#baseline` and `experiments.md#experiment-series`, spawns a `series-runner` agent for each requested series, and collects results. Each series runs all its variants through isolated `debate-runner` agents, ensuring clean context per run.
 
 ```
 /experiment
