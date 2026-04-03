@@ -120,14 +120,18 @@ If participants are arguing past each other due to scope mismatch, name it:
 
 - **When one character dominates:** "Let's hear from someone who hasn't responded to this yet."
 
+- **In the final round**, do NOT ask participants to generate new questions. Require question hierarchy instead:
+  "Of all the unresolved questions we've named — which is most upstream? Which one, if answered, would collapse the most others into it?"
+  The goal of the final round is to leave with one sharper question, not more questions.
+
 **Step 6: Close the session**
 
-1. Signal the final round: "One more round — final positions."
+1. Signal the final round with its purpose: "Final round — not new positions, but question hierarchy. Which open question is the most foundational?"
 
-2. After the last statement, prompt convergence:
+2. After the last statement, prompt structural convergence:
    - "What did we agree on?"
-   - "What remains genuinely unresolved?"
-   - "What new question did this debate open?"
+   - "What remains genuinely unresolved — and what *type* of disagreement is it? (Factual / Values / Predictive / Definitional)"
+   - "Of the unresolved questions, which is upstream of the others?"
 
 3. **Before closing, surface unexamined premises:**
    "Before we close — across this entire debate, which premises did we all accept without questioning? Name at least one."
@@ -137,7 +141,7 @@ If participants are arguing past each other due to scope mismatch, name it:
    - Analogies that were challenged vs. passed unexamined
    - Premises that were surfaced vs. remained implicit
 
-5. Summarize the convergence in 3–5 bullet points.
+5. Summarize the convergence in 3–5 bullet points. **Guard against safe packaging:** if the summary contains only claims all participants can sign without discomfort, it is not a summary — it is an evasion. Name the tension that remains. Irreconcilable disagreement, clearly typed, is a better outcome than tension smoothed into "it depends."
 
 6. Hand off to `/conclude` if a rational conclusion is needed, or `/minutes` to produce the record.
 

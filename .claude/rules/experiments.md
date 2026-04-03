@@ -12,7 +12,7 @@ All experiments are compared against this baseline. Do not modify the baseline b
 |-----------|---------------|
 | Topic | *(set by user at runtime via `/experiment <series> "<topic>"`)* |
 | Approach | `/socratic` |
-| Participants | Standard 4: Visionary (INTJ), Devil's Advocate (ENTP), Empathizer (INFP), Pragmatist (ESTJ) |
+| Participants | Standard 5: Visionary (INTJ), Devil's Advocate (ENTP), Empathizer (INFP), Pragmatist (ESTJ), Analyst (INTP) |
 | Rounds | 3 |
 | Facilitator | Enabled |
 | Expertise Level | Informed |

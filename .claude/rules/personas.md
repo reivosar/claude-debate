@@ -154,12 +154,13 @@ Each character entry includes:
 
 ## Preset Configurations
 
-### Standard (4 participants)
-General-purpose. Covers logic, emotion, pragmatism, and challenge.
+### Standard (5 participants)
+General-purpose. Covers logic, emotion, pragmatism, challenge, and definitional precision.
 - **Visionary (INTJ)**
 - **Devil's Advocate (ENTP)**
 - **Empathizer (INFP)**
 - **Pragmatist (ESTJ)**
+- **Analyst (INTP)**
 
 ### Critical Scrutiny (3 participants)
 For rigorously stress-testing a hypothesis or proposal.
