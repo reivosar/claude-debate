@@ -97,12 +97,14 @@
 
 ## Evaluation
 
+*Scored by `/minutes` — not the facilitator. The facilitator does not evaluate.*
+
 | Dimension | Score (1–5) | Notes |
 |-----------|-------------|-------|
 | Depth | | |
 | Efficiency | | |
 | Novelty | | |
-| Convergence | | |
+| Convergence | | Score HIGH if disagreements are named and typed. Score LOW if the debate ended without identifying what was actually disputed. Agreement is NOT required for a high score. |
 | Balance | | |
 | Psychological Safety | | |
 

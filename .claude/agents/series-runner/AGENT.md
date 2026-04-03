@@ -25,9 +25,9 @@ Received as a prompt from the `/experiment` skill:
 
 ## Instructions
 
-**Step 1: Read the experiment definition**
+**Step 1: Confirm the experiment definition**
 
-Read `.claude/rules/experiments.md` and confirm the run list for the specified series matches the inputs received.
+Confirm the run list for the specified series against `experiments.md` (already in context via CLAUDE.md).
 
 **Step 2: Execute runs sequentially**
 
@@ -48,7 +48,7 @@ Run experiment [experiment_id] with these parameters:
 - big_five_overrides: [overrides or None]
 - date: [date]
 
-Read all required skill and rule files, run the full debate session, save minutes to minutes/[date]-[experiment_id].md, and return evaluation scores as JSON.
+Run the full debate session, save minutes to outputs/[date]-[experiment_id]/minutes.md, and return evaluation scores as JSON.
 ```
 
 Collect the returned JSON scores from each agent.
@@ -58,7 +58,7 @@ Collect the returned JSON scores from each agent.
 After all runs complete, produce the series comparison file and save to:
 
 ```
-minutes/<date>-series-<series_id>-comparison.md
+outputs/<date>-series-<series_id>-comparison/comparison.md
 ```
 
 Format:
@@ -101,12 +101,13 @@ Output a summary for the parent `/experiment` skill:
   "runs_completed": 7,
   "best_total": {"experiment_id": "A-3", "total": 26},
   "worst_total": {"experiment_id": "A-5", "total": 18},
-  "comparison_file": "minutes/2026-04-03-series-A-comparison.md"
+  "comparison_file": "outputs/2026-04-03-series-A-comparison/comparison.md"
 }
 ```
 
 ## Behavioral Rules
 
+- Rule files (personas.md, debate-rules.md, variables.md, experiments.md) and skill definitions are automatically loaded by Claude Code as project context. Do not re-read them.
 - Runs are always sequential within a series. Never spawn two debate-runner agents in parallel.
 - If a `debate-runner` agent fails or returns no scores, record `null` for that run's scores in the comparison table and continue with the next run.
 - Do not interpret results — only report them. Interpretation belongs in the comparison file's Observations section.

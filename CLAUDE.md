@@ -35,7 +35,7 @@ A project for implementing psychological approaches as Claude Code skills and co
 /experiment
   └── series-runner agent  (1 per series, parallel across series)
         └── debate-runner agent  (1 per run, sequential within series)
-              → saves minutes/YYYY-MM-DD-<series>-<id>.md
+              → saves outputs/YYYY-MM-DD-<series>-<id>.md
 ```
 
 - `debate-runner`: clean context per run — no cross-session contamination
@@ -61,21 +61,21 @@ A project for implementing psychological approaches as Claude Code skills and co
 /experiment <series> "<topic>"
     └── series-runner agent
           └── debate-runner agent × runs
-                → minutes/YYYY-MM-DD-<series>-<id>.md
-          → minutes/YYYY-MM-DD-series-<series>-comparison.md
+                → outputs/YYYY-MM-DD-<series>-<id>.md
+          → outputs/YYYY-MM-DD-series-<series>-comparison.md
 ```
 
 ## Templates
 
 - Minutes template: `.claude/templates/minutes.md`
-- Completed minutes: `.claude/minutes/YYYY-MM-DD-<topic-slug>.md`
+- Completed minutes: `outputs/YYYY-MM-DD-<topic-slug>/minutes.md`
 
 ## Experiment Design
 
 - Controlled experiments: `.claude/rules/experiments.md`
 - Change **one variable at a time** against the fixed baseline
 - Series A (approach) → B (expertise) → C (stakes) → D (power) → E (enneagram) → F (big five)
-- Minutes naming: `minutes/YYYY-MM-DD-<series>-<id>.md`
+- Minutes naming: `outputs/YYYY-MM-DD-<series>-<id>.md`
 
 ## Principles
 

@@ -25,7 +25,7 @@ All experiments are compared against this baseline. Do not modify the baseline b
 
 ## Experiment Series
 
-Each series isolates one variable. Run the baseline first, then each variant. Record evaluation scores for every run in `minutes/`.
+Each series isolates one variable. Run the baseline first, then each variant. Record evaluation scores for every run in `outputs/`.
 
 ---
 
@@ -132,14 +132,14 @@ Each series isolates one variable. Run the baseline first, then each variant. Re
 After each experiment run, record the evaluation scores in the minutes file using the naming convention:
 
 ```
-minutes/YYYY-MM-DD-<series>-<experiment-id>.md
+outputs/YYYY-MM-DD-<series>-<experiment-id>/minutes.md
 ```
 
 Examples:
 ```
-minutes/2026-04-03-A-0-baseline.md
-minutes/2026-04-03-A-1-dialectic.md
-minutes/2026-04-03-B-3-mixed-expertise.md
+outputs/2026-04-03-A-0-baseline/minutes.md
+outputs/2026-04-03-A-1-dialectic/minutes.md
+outputs/2026-04-03-B-3-mixed-expertise/minutes.md
 ```
 
 ---

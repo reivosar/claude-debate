@@ -18,7 +18,7 @@ Each debate approach (Socratic, Dialectic, Six Thinking Hats, etc.) is implement
 /debate "Does remote work improve productivity?"
 ```
 
-Runs a full debate end-to-end: setup → facilitation → debate → conclusion → minutes. Saves to `minutes/`.
+Runs a full debate end-to-end: setup → facilitation → debate → conclusion → minutes. Saves to `outputs/`.
 
 ### Controlled experiment
 
@@ -122,9 +122,21 @@ Each session is scored 1–5 on six dimensions:
   skills/             # One directory per skill/command
   templates/
     minutes.md        # Minutes template
-minutes/              # Generated debate records (not tracked in git)
+outputs/              # Generated debate records (not tracked in git)
 ```
 
 ## Output
 
-Minutes are saved to `minutes/YYYY-MM-DD-<topic-slug>.md` in Japanese. Character names and MBTI types remain in English. The `minutes/` directory is excluded from version control.
+Each session produces its own folder under `outputs/`:
+
+```
+outputs/
+  YYYY-MM-DD-<topic-slug>/           ← /debate sessions
+    minutes.md
+  YYYY-MM-DD-<series>-<id>/          ← /experiment runs
+    minutes.md
+  YYYY-MM-DD-series-<series>-comparison/
+    comparison.md
+```
+
+Minutes are written in Japanese. Character names and MBTI types remain in English. The `outputs/` directory is excluded from version control.

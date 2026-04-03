@@ -30,33 +30,28 @@ Received as a prompt from the series-runner agent:
 
 ## Instructions
 
-**Step 1: Load all rule and skill files**
-
-Read the following files in full before doing anything else:
-
-- `.claude/rules/personas.md` — character definitions, Big Five, Enneagram, cognitive biases
-- `.claude/rules/debate-rules.md` — structure, prohibited conduct, best practices, evaluation criteria
-- `.claude/rules/variables.md` — how to apply expertise, stakes, power dynamic
-- `.claude/skills/facilitate/SKILL.md` — facilitation behavior (Steps 1–6)
-- `.claude/skills/<approach>/SKILL.md` — the specific approach to apply (e.g. `.claude/skills/socratic/SKILL.md`)
-- `.claude/skills/conclude/SKILL.md` — conclusion synthesis logic
-- `.claude/skills/minutes/SKILL.md` — minutes recording logic
-- `.claude/templates/minutes.md` — minutes output template
-
-Apply session variables (expertise, stakes, power dynamic, overrides) to all characters as defined in `variables.md`.
-
-**Step 2: Open the session**
+**Step 1: Open the session**
 
 Implement `facilitate/SKILL.md` — Step 1 (Open the session):
 - State the topic, participants with MBTI types, approach being used, and active session variables.
 - State ground rules from `debate-rules.md`.
 - Invite the first speaker.
+- Append the opening to `outputs/<date>-<experiment_id>/transcript.md`.
 
 **Step 3: Run the debate**
 
 Implement `<approach>/SKILL.md` in full for the specified number of rounds:
 - Follow every step defined in the approach skill file.
 - Apply facilitation throughout: manage turns (facilitate Step 2), enforce rules (facilitate Step 3), detect and name cognitive biases (facilitate Step 3b), apply variable adjustments (facilitate Step 3c), draw out depth (facilitate Step 5).
+- After generating each statement or facilitator intervention, immediately append it to `outputs/<date>-<experiment_id>/transcript.md`. Do not accumulate statements in context before writing.
+
+Append format per entry:
+```
+---
+Statement N — [Speaker] ([MBTI]) — [Type] [FLAG]
+
+[Full statement text]
+```
 
 **Step 4: Close and converge**
 
@@ -64,6 +59,7 @@ Implement `facilitate/SKILL.md` — Step 6 (Close the session):
 - Signal the final round.
 - Prompt convergence questions.
 - Summarize 3–5 agreement and disagreement points.
+- Append to `transcript.md`.
 
 **Step 5: Conclude**
 
@@ -72,13 +68,15 @@ Implement `conclude/SKILL.md` in full:
 - Classify disagreements: Factual / Values / Predictive / Definitional.
 - Produce the three-part conclusion: Established / Conditional / Open.
 - State what would change the conclusion.
+- Append to `transcript.md`.
 
 **Step 6: Write minutes**
 
-Implement `minutes/SKILL.md` in full using `templates/minutes.md` as the output structure:
+Read `outputs/<date>-<experiment_id>/transcript.md` in full, then implement `minutes/SKILL.md` using `templates/minutes.md`:
 - Write in Japanese.
 - Include all sections: Header (with all variable settings and experiment_id), Executive Summary, Full Transcript, Statement Index, Key Moments, Convergence, Evaluation scores, Conclusion.
-- Save to: `minutes/<date>-<experiment_id>.md`
+- The Full Transcript section is compiled from `transcript.md` — do not regenerate from memory.
+- Save to: `outputs/<date>-<experiment_id>/minutes.md`
 
 **Step 7: Return scores**
 
@@ -95,13 +93,13 @@ Output evaluation scores as JSON for the series-runner to collect:
   "balance": 4,
   "psychological_safety": 5,
   "total": 24,
-  "minutes_file": "minutes/2026-04-03-A-1.md"
+  "minutes_file": "outputs/2026-04-03-A-1/minutes.md"
 }
 ```
 
 ## Behavioral Rules
 
-- Read each skill file before implementing its logic. Do not rely on memory of prior sessions.
+- Rule files (personas.md, debate-rules.md, variables.md, experiments.md) and skill definitions are automatically loaded by Claude Code as project context. Do not re-read them.
 - Do not reference any debate content from outside this session.
 - All minutes output is in Japanese. Character names and MBTI types remain in English.
 - Run all rounds before moving to conclusion. Do not abbreviate.

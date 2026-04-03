@@ -50,26 +50,36 @@ Apply the Facilitate skill: open the session, introduce participants, state the 
 
 Apply the chosen approach skill for the agreed number of rounds. The facilitator manages turn order and enforces rules throughout. Run all rounds before proceeding.
 
+After generating each statement or facilitator intervention, immediately append it to `outputs/YYYY-MM-DD-<topic-slug>/transcript.md`. Do not accumulate statements in context before writing.
+
+Append format per entry:
+```
+---
+Statement N — [Speaker] ([MBTI]) — [Type] [FLAG]
+
+[Full statement text]
+```
+
 **Step 4: Close facilitation (`/facilitate` — Close)**
 
-Apply the Facilitate skill: signal the final round, prompt the convergence questions, and summarize convergence in 3–5 bullet points.
+Apply the Facilitate skill: signal the final round, prompt the convergence questions, and summarize convergence in 3–5 bullet points. Append to `transcript.md`.
 
 **Step 5: Draw the conclusion (`/conclude`)**
 
-Apply the Conclude skill immediately after convergence. Produce the three-part conclusion: Established / Conditional / Open.
+Apply the Conclude skill immediately after convergence. Produce the three-part conclusion: Established / Conditional / Open. Append to `transcript.md`.
 
 **Step 6: Produce minutes (`/minutes`)**
 
-Apply the Minutes skill to produce the full Japanese record:
+Read `transcript.md` in full, then apply the Minutes skill to produce the full Japanese record:
 - Executive Summary
-- Full Transcript
+- Full Transcript (copied from `transcript.md` — do not regenerate from memory)
 - Statement Index
 - Key Moments
 - Convergence
 - Evaluation scores
-- Conclusion (copied from Step 5)
+- Conclusion
 
-Save to `minutes/YYYY-MM-DD-<topic-slug>.md`.
+Save to `outputs/YYYY-MM-DD-<topic-slug>/minutes.md`.
 
 ### Behavioral Rules
 - Do not skip any stage. If a stage is skipped, state why explicitly.

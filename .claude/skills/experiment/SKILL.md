@@ -16,9 +16,9 @@ Entry point for the experiment system. Reads the experiment definition from `.cl
 ```
 /experiment
     └── series-runner (Series A)
-    │     ├── debate-runner: A-0  → minutes/YYYY-MM-DD-A-0.md
-    │     ├── debate-runner: A-1  → minutes/YYYY-MM-DD-A-1.md
-    │     └── → minutes/YYYY-MM-DD-series-A-comparison.md
+    │     ├── debate-runner: A-0  → outputs/YYYY-MM-DD-A-0.md
+    │     ├── debate-runner: A-1  → outputs/YYYY-MM-DD-A-1.md
+    │     └── → outputs/YYYY-MM-DD-series-A-comparison.md
     └── series-runner (Series B)          ← parallel if multiple series requested
           ├── debate-runner: B-0
           └── ...
@@ -77,7 +77,7 @@ Series A — Approach Comparison
   Runs completed: 7
   Highest score: A-3 / steelmanning (26/30)
   Lowest score: A-5 / motivational-interviewing (18/30)
-  Comparison file: minutes/YYYY-MM-DD-series-A-comparison.md
+  Comparison file: outputs/YYYY-MM-DD-series-A-comparison.md
 
 Series B — Expertise Level
   ...
@@ -88,7 +88,7 @@ Series B — Expertise Level
 - Series-runner agents within a series run variants sequentially (context isolation requires one debate at a time).
 - Multiple series can run in parallel with each other.
 - Do not interpret results here — interpretation is in each series comparison file.
-- All output files are saved to `minutes/`. Never overwrite existing files — use the date+experiment_id naming to ensure uniqueness.
+- All output files are saved under `outputs/<date>-<id>/`. Never overwrite existing files — use the date+experiment_id naming to ensure uniqueness.
 - If the user requests a single run (e.g. "A-1だけ走らせて"), spawn one `series-runner` with a single-run list.
 
 ## Examples

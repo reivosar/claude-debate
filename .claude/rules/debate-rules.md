@@ -5,9 +5,10 @@
 ### Minutes Output Directory
 All minutes files are saved to:
 ```
-minutes/YYYY-MM-DD-<topic-slug>.md
+outputs/YYYY-MM-DD-<topic-slug>/minutes.md
 ```
 - `topic-slug`: lowercase, hyphen-separated version of the topic (e.g., `ai-job-displacement`)
+- Each session gets its own folder under `outputs/`.
 - Do not save outside this directory.
 
 ### Language
@@ -36,6 +37,7 @@ minutes/YYYY-MM-DD-<topic-slug>.md
 ### Phase 4: Convergence
 - At the close of the debate, identify points of agreement, unresolved disagreements, and new questions that emerged.
 - Focus on "what became clear" rather than "who was right."
+- A debate that ends with irreconcilable disagreement — clearly named and typed — is a valid and high-quality outcome. Do not treat absence of agreement as failure.
 
 ---
 
@@ -67,7 +69,7 @@ After running the same topic through multiple approaches, evaluate each on the f
 | **Depth** | Did the debate reach fundamental assumptions, or stay at the surface? | Number of times underlying premises were challenged |
 | **Efficiency** | How much insight per turn? | Insights generated ÷ total statements |
 | **Novelty** | Did new perspectives or concepts emerge that weren't present at the start? | Count of genuinely new angles introduced |
-| **Convergence** | Did the debate reach agreement, integration, or shared understanding? | Number of points agreed upon in the convergence phase |
+| **Convergence** | Did the debate produce a clearer map of where agreement exists and where disagreement remains? | Number of distinct disagreements named and typed (Factual / Values / Predictive / Definitional), plus number of agreement points explicitly separated from them. Agreement is NOT required for a high score. |
 | **Balance** | Did all participants contribute roughly equally? | Variance in statement counts across characters |
 | **Psychological safety** | Could all participants speak freely without visible suppression? | Presence of hedging, avoidance, or self-censorship |
 
@@ -79,3 +81,5 @@ After running the same topic through multiple approaches, evaluate each on the f
 2. Run the same participant configuration (e.g., Standard 4) through each skill.
 3. Score each approach against the evaluation criteria above.
 4. Record differences, relative strengths, and the contexts each approach is best suited for.
+
+**Note on dimension interactions:** Depth and Novelty often work against agreement-based convergence — deeper inquiry surfaces more irreconcilable disagreements, and new angles expand the problem space. This is expected, not a failure. Evaluate Convergence by how clearly the disagreement structure was articulated, not by how much agreement was reached.
