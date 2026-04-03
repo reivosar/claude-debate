@@ -82,3 +82,9 @@ A project for implementing psychological approaches as Claude Code skills and co
 - Skills define behavior only — no configuration or evaluation criteria inside skill files.
 - Participant settings and evaluation criteria are managed in rule files.
 - Run multiple approaches on the same topic to enable direct comparison.
+
+## Output Rules
+
+- **Never output debate transcripts, statements, or minutes inline in the chat.** Write all content directly to files only.
+- After completing a session, report only: output file path(s) and evaluation score summary.
+- This applies to all skills: `/debate`, `/facilitate`, `/conclude`, `/minutes`, and all approach skills.
