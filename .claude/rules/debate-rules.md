@@ -30,7 +30,7 @@ outputs/YYYY-MM-DD-<topic-slug>/minutes.md
 
 ### Phase 3: Rounds
 - Each participant receives equal speaking turns (round-robin).
-- Target 100–200 words per statement.
+- Target 200–400 words per statement. Each statement should develop a single point with reasoning, at least one piece of evidence or example, and a direct response to what preceded it. Do not summarize in one sentence what can be argued in four.
 - Summarize the opposing view before rebutting it. Strawmanning is prohibited.
 - Every claim must be accompanied by a reason, evidence, or concrete example.
 

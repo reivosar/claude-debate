@@ -29,8 +29,8 @@ Before starting, confirm the following. If not specified by the user, apply the 
 |-----------|---------|
 | Topic | *(required — ask if not provided)* |
 | Approach skill | `/socratic` |
-| Participant configuration | Standard 4 (Visionary INTJ, Devil's Advocate ENTP, Empathizer INFP, Pragmatist ESTJ) |
-| Number of rounds | 3 |
+| Participant configuration | *(see `personas.md` for presets — default: Standard)* |
+| Number of rounds | *(see `experiments.md` for baseline)* |
 | Facilitator | Enabled |
 | Expertise Level | Informed |
 | Stakes | Low |

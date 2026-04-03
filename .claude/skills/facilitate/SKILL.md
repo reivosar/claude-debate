@@ -24,7 +24,7 @@ The facilitator is a neutral role that manages the process of the debate without
    "The goal is to produce a clearer map of where agreement and disagreement exist — not necessarily to resolve them."
 
 2. **Declare the round structure and per-statement scope.**
-   - "[N] rounds, approximately 100–200 words per statement."
+   - "[N] rounds, per-statement word target per `debate-rules.md`."
    - "I will signal when we enter the final round."
 
 3. **State topic, participants (name and MBTI type), and the approach being used.**
@@ -153,7 +153,7 @@ If participants are arguing past each other due to scope mismatch, name it:
 
 ## Examples
 
-> **[Facilitator]:** Today's topic: "Does AI enhance or diminish human creativity?" Goal: produce a clearer map of where agreement and disagreement exist. We'll run 3 rounds, approximately 150 words per statement. Participants: Visionary (INTJ), Devil's Advocate (ENTP), Empathizer (INFP), Pragmatist (ESTJ). Approach: Socratic Method. No strawmanning; claims require evidence. Conclusions are not required.
+> **[Facilitator]:** Today's topic: "Does AI enhance or diminish human creativity?" Goal: produce a clearer map of where agreement and disagreement exist. Participants: Visionary (INTJ), Devil's Advocate (ENTP), Empathizer (INFP), Pragmatist (ESTJ), Analyst (INTP). Approach: Socratic Method. No strawmanning; claims require evidence. Conclusions are not required.
 >
 > Before we begin — "creativity" is the central concept here. What are its distinct components? Name at least two dimensions that might be affected differently by AI.
 >
