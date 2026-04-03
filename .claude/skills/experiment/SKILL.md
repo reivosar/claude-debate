@@ -49,7 +49,7 @@ Examples:
 
 **Step 2: Read experiment definitions**
 
-Read `.claude/rules/experiments.md` and extract the full run configuration for each requested series. Replace the hardcoded baseline topic with the user-provided topic for all runs.
+Read `experiments.md#baseline` for baseline parameters and `experiments.md#experiment-series` for series definitions. Extract the full run configuration for each requested series. Replace the hardcoded baseline topic with the user-provided topic for all runs.
 
 **Step 3: Spawn series-runner agents**
 
@@ -60,7 +60,7 @@ Pass to each `series-runner`:
 - `series_id`
 - `series_name`
 - `variable` (what is being changed)
-- `runs` (full list of run parameter sets from `experiments.md`)
+- `runs` (full list of run parameter sets from `experiments.md#experiment-series`)
 - `date` (today's date: YYYY-MM-DD)
 
 **Step 4: Collect and report results**

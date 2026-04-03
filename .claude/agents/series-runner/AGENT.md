@@ -27,7 +27,7 @@ Received as a prompt from the `/experiment` skill:
 
 **Step 1: Confirm the experiment definition**
 
-Confirm the run list for the specified series against `experiments.md` (already in context via CLAUDE.md).
+Confirm the run list for the specified series against `experiments.md#experiment-series` (already in context via CLAUDE.md).
 
 **Step 2: Execute runs sequentially**
 

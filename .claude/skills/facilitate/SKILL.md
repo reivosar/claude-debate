@@ -24,7 +24,7 @@ The facilitator is a neutral role that manages the process of the debate without
    "The goal is to produce a clearer map of where agreement and disagreement exist — not necessarily to resolve them."
 
 2. **Declare the round structure and per-statement scope.**
-   - "[N] rounds, per-statement word target per `debate-rules.md`."
+   - "[N] rounds, per-statement word target per `debate-rules.md#phase-3`."
    - "I will signal when we enter the final round."
 
 3. **State topic, participants (name and MBTI type), and the approach being used.**
@@ -57,7 +57,7 @@ Do not proceed to the first round until decomposition is complete.
 
 **Step 3b: Detect and name cognitive biases**
 
-When a character's default bias (defined in `personas.md`) surfaces, name it and redirect with the appropriate counter-prompt:
+When a character's default bias (defined in `personas.md#cognitive-biases`) surfaces, name it and redirect with the appropriate counter-prompt:
 
 | Bias detected | Facilitator intervention |
 |--------------|--------------------------|

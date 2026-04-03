@@ -34,7 +34,7 @@ Received as a prompt from the series-runner agent:
 
 Implement `facilitate/SKILL.md` — Step 1 (Open the session):
 - State the topic, participants with MBTI types, approach being used, and active session variables.
-- State ground rules from `debate-rules.md`.
+- State ground rules from `debate-rules.md#prohibited-conduct` and `debate-rules.md#best-practices`.
 - Invite the first speaker.
 - Append the opening to `outputs/<date>-<experiment_id>/transcript.md`.
 
@@ -103,4 +103,4 @@ Output evaluation scores as JSON for the series-runner to collect:
 - Do not reference any debate content from outside this session.
 - All minutes output is in Japanese. Character names and MBTI types remain in English.
 - Run all rounds before moving to conclusion. Do not abbreviate.
-- If a parameter is missing, use the baseline value from `experiments.md`.
+- If a parameter is missing, use the baseline value from `experiments.md#baseline`.

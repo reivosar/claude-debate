@@ -48,7 +48,7 @@ Produce a complete, structured record of the debate using the template at `.clau
 - List new questions the debate opened that were not present at the start.
 
 **Step 8: Evaluation**
-- Score the session 1–5 on each dimension from `debate-rules.md`: Depth / Efficiency / Novelty / Convergence / Balance / Psychological Safety.
+- Score the session 1–5 on each dimension from `debate-rules.md#evaluation-criteria`: Depth / Efficiency / Novelty / Convergence / Balance / Psychological Safety.
 - Write one justification sentence per dimension.
 - Scoring is performed by `/minutes`, not the facilitator.
 - Convergence: score based on how clearly the map of agreement and disagreement was drawn — NOT on how much agreement was reached. A debate that names three irreconcilable value-based disagreements scores higher than one that manufactured vague consensus.

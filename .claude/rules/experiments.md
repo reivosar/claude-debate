@@ -4,7 +4,7 @@ Changing multiple variables simultaneously makes it impossible to attribute diff
 
 ---
 
-## Baseline (Control)
+## (baseline) Baseline (Control)
 
 All experiments are compared against this baseline. Do not modify the baseline between experiments.
 
@@ -23,13 +23,13 @@ All experiments are compared against this baseline. Do not modify the baseline b
 
 ---
 
-## Experiment Series
+## (experiment-series) Experiment Series
 
 Each series isolates one variable. Run the baseline first, then each variant. Record evaluation scores for every run in `outputs/`.
 
 ---
 
-### Series A — Approach (Psychological Approach Comparison)
+### (series-a) Series A — Approach (Psychological Approach Comparison)
 
 **Variable:** Approach skill  
 **All other parameters:** Baseline
@@ -48,7 +48,7 @@ Each series isolates one variable. Run the baseline first, then each variant. Re
 
 ---
 
-### Series B — Expertise Level (Effect of Domain Knowledge)
+### (series-b) Series B — Expertise Level (Effect of Domain Knowledge)
 
 **Variable:** Expertise Level  
 **All other parameters:** Baseline (approach = `/socratic`)
@@ -64,7 +64,7 @@ Each series isolates one variable. Run the baseline first, then each variant. Re
 
 ---
 
-### Series C — Stakes (Effect of Personal Investment)
+### (series-c) Series C — Stakes (Effect of Personal Investment)
 
 **Variable:** Stakes  
 **All other parameters:** Baseline (approach = `/socratic`)
@@ -79,7 +79,7 @@ Each series isolates one variable. Run the baseline first, then each variant. Re
 
 ---
 
-### Series D — Power Dynamic (Effect of Hierarchy)
+### (series-d) Series D — Power Dynamic (Effect of Hierarchy)
 
 **Variable:** Power Dynamic  
 **All other parameters:** Baseline (approach = `/socratic`)
@@ -94,7 +94,7 @@ Each series isolates one variable. Run the baseline first, then each variant. Re
 
 ---
 
-### Series E — Enneagram Override (Effect of Motivational Type)
+### (series-e) Series E — Enneagram Override (Effect of Motivational Type)
 
 **Variable:** Enneagram type assigned to one character  
 **All other parameters:** Baseline (approach = `/socratic`)  
@@ -111,7 +111,7 @@ Each series isolates one variable. Run the baseline first, then each variant. Re
 
 ---
 
-### Series F — Big Five Override (Effect of Personality Trait Adjustment)
+### (series-f) Series F — Big Five Override (Effect of Personality Trait Adjustment)
 
 **Variable:** One Big Five trait on one character  
 **All other parameters:** Baseline (approach = `/socratic`)  
@@ -127,7 +127,7 @@ Each series isolates one variable. Run the baseline first, then each variant. Re
 
 ---
 
-## Recording Results
+## (recording-results) Recording Results
 
 After each experiment run, record the evaluation scores in the minutes file using the naming convention:
 
@@ -144,7 +144,7 @@ outputs/2026-04-03-B-3-mixed-expertise/minutes.md
 
 ---
 
-## Comparison Table
+## (comparison-table) Comparison Table
 
 After completing a series, populate this table:
 
@@ -158,7 +158,7 @@ After completing a series, populate this table:
 
 ---
 
-## Confound Checklist
+## (confound-checklist) Confound Checklist
 
 Before running any experiment, confirm:
 - [ ] Only one variable differs from the baseline

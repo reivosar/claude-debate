@@ -1,6 +1,6 @@
 # Debate Rules and Evaluation Criteria
 
-## Output Settings
+## (output-settings) Output Settings
 
 ### Minutes Output Directory
 All minutes files are saved to:
@@ -17,31 +17,31 @@ outputs/YYYY-MM-DD-<topic-slug>/minutes.md
 
 ---
 
-## Debate Structure
+## (debate-structure) Debate Structure
 
-### Phase 1: Define the Topic
+### (phase-1) Phase 1: Define the Topic
 - State the topic as a single clear sentence.
 - Agree on definitions of any ambiguous terms before starting.
 - Declare the participant configuration (preset or custom).
 
-### Phase 2: State Initial Positions
+### (phase-2) Phase 2: State Initial Positions
 - Each participant briefly states their starting position in character.
 - Positions are not limited to for/against — "concerned," "conditionally in favor," and "uncertain" are all valid.
 
-### Phase 3: Rounds
+### (phase-3) Phase 3: Rounds
 - Each participant receives equal speaking turns (round-robin).
 - Target 200–400 words per statement. Each statement should develop a single point with reasoning, at least one piece of evidence or example, and a direct response to what preceded it. Do not summarize in one sentence what can be argued in four.
 - Summarize the opposing view before rebutting it. Strawmanning is prohibited.
 - Every claim must be accompanied by a reason, evidence, or concrete example.
 
-### Phase 4: Convergence
+### (phase-4) Phase 4: Convergence
 - At the close of the debate, identify points of agreement, unresolved disagreements, and new questions that emerged.
 - Focus on "what became clear" rather than "who was right."
 - A debate that ends with irreconcilable disagreement — clearly named and typed — is a valid and high-quality outcome. Do not treat absence of agreement as failure.
 
 ---
 
-## Prohibited Conduct
+## (prohibited-conduct) Prohibited Conduct
 
 - Personal attacks or insults (including between characters).
 - Strawmanning — misrepresenting an opposing view in order to rebut it.
@@ -50,7 +50,7 @@ outputs/YYYY-MM-DD-<topic-slug>/minutes.md
 
 ---
 
-## Best Practices
+## (best-practices) Best Practices
 
 - **Steel man first**: Before rebutting, state the strongest version of the opposing argument.
 - **Branch management**: When a new thread emerges, name it ("that's a separate point") and return to the current one.
@@ -60,7 +60,7 @@ outputs/YYYY-MM-DD-<topic-slug>/minutes.md
 
 ---
 
-## Evaluation Criteria (for comparing approaches)
+## (evaluation-criteria) Evaluation Criteria (for comparing approaches)
 
 After running the same topic through multiple approaches, evaluate each on the following dimensions:
 
@@ -75,7 +75,7 @@ After running the same topic through multiple approaches, evaluate each on the f
 
 ---
 
-## Comparison Procedure
+## (comparison-procedure) Comparison Procedure
 
 1. Select a single topic (e.g., "Will AI eliminate more jobs than it creates?").
 2. Run the same participant configuration (e.g., Standard 4) through each skill.

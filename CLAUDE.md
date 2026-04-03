@@ -83,6 +83,22 @@ A project for implementing psychological approaches as Claude Code skills and co
 - Participant settings and evaluation criteria are managed in rule files.
 - Run multiple approaches on the same topic to enable direct comparison.
 
+## Section Reference Convention
+
+All rule file headings carry an inline ID in the form `(id)`. When referencing a specific section, use `filename.md#id` — do not load an entire file when only a section is needed.
+
+| Reference | Section |
+|-----------|---------|
+| `personas.md#preset-standard` | Standard participant preset |
+| `personas.md#intj` | Visionary (INTJ) character |
+| `personas.md#cognitive-biases` | Cognitive biases reference |
+| `experiments.md#baseline` | Experiment baseline configuration |
+| `experiments.md#series-a` | Series A experiment definitions |
+| `debate-rules.md#evaluation-criteria` | Evaluation scoring dimensions |
+| `debate-rules.md#phase-3` | Round rules and statement targets |
+| `variables.md#expertise-level` | Expertise level definitions |
+| `variables.md#power-dynamic` | Power dynamic settings |
+
 ## Output Rules
 
 - **Never output debate transcripts, statements, or minutes inline in the chat.** Write all content directly to files only.

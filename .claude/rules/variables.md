@@ -4,7 +4,7 @@ Variables set per session to modulate how participants behave. These are applied
 
 ---
 
-## Expertise Level
+## (expertise-level) Expertise Level
 
 How much each participant knows about the debate topic.
 
@@ -18,7 +18,7 @@ How much each participant knows about the debate topic.
 
 ---
 
-## Stakes
+## (stakes) Stakes
 
 How directly the debate outcome affects each participant.
 
@@ -32,7 +32,7 @@ Stakes can be set uniformly (all participants at the same level) or asymmetrical
 
 ---
 
-## Power Dynamic
+## (power-dynamic) Power Dynamic
 
 The social hierarchy among participants.
 
@@ -46,7 +46,7 @@ When Hierarchical is set, the facilitator actively compensates: direct invitatio
 
 ---
 
-## Enneagram Override
+## (enneagram-override) Enneagram Override
 
 Assign a specific Enneagram type to a character to override the default affinity. This adds a motivational layer on top of MBTI.
 
@@ -58,11 +58,11 @@ Visionary (INTJ): Enneagram 1
 Pragmatist (ESTJ): Enneagram 6
 ```
 
-See `personas.md` → Enneagram Types for type definitions.
+See `personas.md#enneagram` for type definitions.
 
 ---
 
-## Big Five Override
+## (big-five-override) Big Five Override
 
 Adjust individual Big Five traits to shift a character's behavior within their MBTI type. Use when a more specific personality profile is needed.
 
@@ -74,11 +74,11 @@ Analyst (INTP): N-High   ← makes them more reactive to criticism than the defa
 Commander (ENTJ): A-Mid  ← softens their dismissiveness toward minority views
 ```
 
-Only specify traits you are changing. Unspecified traits revert to the defaults in `personas.md`.
+Only specify traits you are changing. Unspecified traits revert to the defaults in `personas.md#character-roster`.
 
 ---
 
-## Recommended Configurations by Goal
+## (recommended-configurations) Recommended Configurations by Goal
 
 | Goal | Expertise | Stakes | Power Dynamic |
 |------|-----------|--------|---------------|
@@ -91,7 +91,7 @@ Only specify traits you are changing. Unspecified traits revert to the defaults 
 
 ---
 
-## How to Apply Variables
+## (how-to-apply) How to Apply Variables
 
 Variables are declared in the session header and applied throughout:
 
