@@ -23,22 +23,7 @@ Orchestrates a complete debate session from open to close. Reads and applies eac
 
 **Step 1: Confirm session parameters**
 
-Before starting, confirm the following. If not specified by the user, apply the defaults:
-
-| Parameter | Default |
-|-----------|---------|
-| Topic | *(required — ask if not provided)* |
-| Approach skill | `/socratic` |
-| Participant configuration | *(see `personas.md` for presets — default: Standard)* |
-| Number of rounds | *(see `experiments.md` for baseline)* |
-| Facilitator | Enabled |
-| Expertise Level | Informed |
-| Stakes | Low |
-| Power Dynamic | Flat |
-| Enneagram override | None (use defaults from `personas.md`) |
-| Big Five override | None (use defaults from `personas.md`) |
-
-Session variables (Expertise, Stakes, Power Dynamic, Enneagram, Big Five) are applied to all characters throughout the session. See `variables.md` for definitions and effects.
+Ask for the topic if not provided. For all other parameters (approach, participants, rounds, session variables), use whatever the user specifies. Apply rule-file baselines for anything left unspecified — do not prompt for them.
 
 State the confirmed parameters and proceed without further prompting unless the user objects.
 
@@ -95,9 +80,7 @@ Save to `outputs/YYYY-MM-DD-<topic-slug>/minutes.md`.
 > Session parameters confirmed:
 > - Topic: Will AI eliminate more jobs than it creates?
 > - Approach: `/dialectic`
-> - Participants: Standard 4 (Visionary INTJ, Devil's Advocate ENTP, Empathizer INFP, Pragmatist ESTJ)
-> - Rounds: 3
-> - Facilitator: Enabled
+> - All other parameters: baseline
 >
 > Proceeding with full workflow.
 >
