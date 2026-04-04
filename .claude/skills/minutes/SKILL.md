@@ -9,7 +9,7 @@ description: |
 # Minutes
 
 ## Overview
-Produce a complete, structured record of the debate using the template at `.claude/templates/minutes.md`. The record has three layers: (1) an executive summary for quick orientation, (2) a full transcript preserving every statement in full, and (3) an index for navigation. The record must be accurate and complete enough to reconstruct the debate from scratch without having attended it.
+Produce a complete, structured record of the debate using the template at `.claude/templates/minutes_ja.md`. The record has three layers: (1) an executive summary for quick orientation, (2) a full transcript preserving every statement in full, and (3) an index for navigation. The record must be accurate and complete enough to reconstruct the debate from scratch without having attended it.
 
 ## Instructions
 

@@ -67,7 +67,7 @@ A project for implementing psychological approaches as Claude Code skills and co
 
 ## Templates
 
-- Minutes template: `.claude/templates/minutes.md`
+- Minutes template: `.claude/templates/minutes_ja.md`
 - Completed minutes: `outputs/YYYY-MM-DD-<topic-slug>/minutes.md`
 
 ## Experiment Design

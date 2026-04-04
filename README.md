@@ -18,7 +18,7 @@ Each debate approach (Socratic, Dialectic, Six Thinking Hats, etc.) is implement
 /debate "Does remote work improve productivity?"
 ```
 
-Runs a full debate end-to-end: setup → facilitation → debate → conclusion → minutes. Saves to `outputs/`.
+Confirms parameters, spawns an isolated `debate-runner` agent, and reports results when done. The agent writes each statement to disk as it generates it, keeping the main session context clean. Saves to `outputs/`.
 
 ### Controlled experiment
 
@@ -60,7 +60,7 @@ Runs all variants in a series (e.g., Series A = all 7 approaches) on the same to
 
 | Preset | Participants |
 |--------|-------------|
-| Standard (4) | Visionary (INTJ), Devil's Advocate (ENTP), Empathizer (INFP), Pragmatist (ESTJ) |
+| Standard (5) | Visionary (INTJ), Devil's Advocate (ENTP), Empathizer (INFP), Pragmatist (ESTJ), Analyst (INTP) |
 | Critical Scrutiny (3) | Analyst (INTP), Commander (ENTJ), Defender (ISFJ) |
 | Creative Divergence (5) | Activist (ENFP), Devil's Advocate (ENTP), Mediator (INFJ), Detective (ISTP), Entertainer (ESFP) |
 | Ethics and Social Issues (4) | Mediator (INFJ), Commander (ENTJ), Adventurer (ISFP), Pragmatist (ESTJ) |
@@ -92,7 +92,7 @@ Controlled experiments change one variable at a time against a fixed baseline.
 | E | Enneagram override |
 | F | Big Five override |
 
-Baseline: `/socratic`, Standard 4, Informed, Low stakes, Flat power dynamic.
+Baseline: `/socratic`, Standard 5, Informed, Low stakes, Flat power dynamic.
 
 ## Evaluation Dimensions
 
@@ -132,8 +132,10 @@ Each session produces its own folder under `outputs/`:
 ```
 outputs/
   YYYY-MM-DD-<topic-slug>/           ← /debate sessions
+    transcript.md
     minutes.md
   YYYY-MM-DD-<series>-<id>/          ← /experiment runs
+    transcript.md
     minutes.md
   YYYY-MM-DD-series-<series>-comparison/
     comparison.md

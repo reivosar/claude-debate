@@ -31,18 +31,24 @@ The facilitator is a neutral role that manages the process of the debate without
 
 4. **State ground rules briefly:** prohibited conduct, and that conclusions are not required.
 
-5. **Invite the first speaker.**
+5. **Invite the first speaker — but only after Step 1b is complete (see below).**
 
 **Step 1b: Enforce concept decomposition**
+*(Applies to: Socratic, Dialectic, Steelmanning. Skip for: Open Dialogue, Six Hats, MI, Narrative.)*
 
-Before inviting the first speaker, identify the central concept(s) in the topic.
-If any concept is complex or multi-dimensional (e.g., "creativity", "productivity", "democracy", "freedom"):
+Before inviting the first speaker, the facilitator — not the participants — identifies the central concept(s) in the topic and actively decomposes them.
 
-1. Ask all participants: "Before we begin — what are the distinct components of [concept]? Name at least two dimensions that might be affected differently."
-2. Record the agreed decomposition.
-3. At the start of each subsequent round, anchor statements to the decomposition: "Which component of [concept] are you primarily addressing here?"
+**Do not ask participants "what does X mean?" and wait. Do the decomposition yourself and present it.**
 
-Do not proceed to the first round until decomposition is complete.
+1. Identify 2–4 competing meanings or dimensions of the central concept. State them explicitly:
+   "Before we begin — '[concept]' can mean at least [N] different things. I identify: (1) [meaning A], (2) [meaning B], (3) [meaning C]. Today's session will treat all three as in-scope. When you speak, make clear which meaning you are addressing."
+2. Declare which meaning will be the primary focus if one is more central than the others.
+3. Assign responsibility: "If you notice a speaker shifting between meanings without flagging it, name it."
+
+**Do not proceed to Round 1 until decomposition is declared.**
+
+If a participant does the decomposition before the facilitator (as in Statement 1 of the Israel-Palestine transcript), that is a Step 1b implementation failure. Acknowledge it and formalize it:
+"[Character] has done this decomposition — let me formalize it as our working framework."
 
 **Step 2: Manage rounds**
 - After each statement, name the next speaker.
@@ -84,25 +90,60 @@ If **Stakes = High**: watch for defensiveness and sunk cost patterns. When a cha
 
 If **Expertise = Mixed**: when Experts use jargon or skip explanations, prompt: "Can you say that in terms a non-specialist would follow?"
 
-**Step 3d: Challenge historical analogies**
+**Step 3d: Challenge historical analogies — forced interrupt**
+*(Applies to: Socratic, Dialectic, Steelmanning, MI. Skip for: Open Dialogue, Narrative, Six Hats.)*
 
-When a participant introduces a historical or comparative analogy (e.g., "this is like the camera replacing painters"), immediately prompt the next speaker — do not wait for the round to end:
+When a participant introduces a historical analogy, comparative case, or metaphor, the facilitator **interrupts before the next speaker responds**. Do not wait for the round to end.
 
-"[Next speaker], does that analogy hold structurally? What is at least one way this situation differs from [X]?"
+**Trigger phrases** (detect any of these):
+- 「〜のように」「〜と同様に」「歴史的に見ると」「〜では」「〜の場合と同様」
+- "like", "similar to", "historically", "just as [X] did", "the way [X] worked"
 
-If no one challenges it, the facilitator intervenes:
-"Let me note that analogy is currently unexamined — what's structurally different about the current situation?"
+**Interrupt format:**
+"[Facilitator interrupt] — [Speaker] draws a parallel to [X]. [Next speaker], before your statement — does that analogy hold structurally? Choose one: (a) name the key similarity that makes it valid, (b) name a structural difference that limits it, or (c) name the variable the analogy imports that may not apply here."
 
-Silence ≠ acceptance. The facilitator owns this check.
+If no one challenges the analogy, the facilitator intervenes:
+"Let me note that analogy is currently unexamined. What is structurally different about [current situation] vs. [X]?"
 
-**Step 3e: Detect scope drift**
+**Silence ≠ acceptance. The facilitator owns this check.**
 
-When a participant's claim shifts level without naming it (individual experience → professional/market → cultural/societal), intervene:
+This is not optional. An unchallenged analogy becomes an unexamined premise. The Israel-Palestine transcript contained 8+ analogies (Northern Ireland, South Africa, Belgium, Switzerland, Quebec, Oslo, Camp David, Gaza withdrawal) — none were challenged structurally.
 
-"[Character], are you speaking about individual ability, the professional market, or cultural output? Your claim may hold at one level but not another — let's be explicit."
+**Step 3e: Detect and name scope drift**
+*(Applies to: Socratic, Dialectic, Steelmanning, MI, Narrative, Open Dialogue. Skip for: Six Hats.)*
 
-If participants are arguing past each other due to scope mismatch, name it:
-"I think we have two separate claims here — one about individuals, one about culture. Let's separate them before continuing."
+When a participant's claim shifts level — between individual psychology, organizational/market dynamics, national policy, geopolitics, or normative/descriptive framing — intervene with an explicit naming:
+
+**Standard naming format:**
+"Today's discussion has moved from [Level A] to [Level B]. I want to flag that [Level A] question — [state it] — is not yet resolved. We can move to [Level B], but let's note the shift."
+
+**Level taxonomy:**
+- Individual psychology / cognition
+- Interpersonal / community / civil society
+- Institutional / policy / national
+- International / geopolitical
+- Normative (what should be) ↔ Predictive (what will happen) ↔ Descriptive (what is)
+
+**Also detect normative/predictive conflation:**
+"[Character]'s claim mixes 'what is right' and 'what will happen.' These are separate questions. Which are you claiming?"
+
+When two participants argue past each other due to scope mismatch, name it:
+"I think we have two separate claims here — one about [Level A], one about [Level B]. Let's separate them."
+
+**Step 3f: Compression check — new**
+*(Applies to: Socratic, Dialectic, Steelmanning, MI, Narrative, Six Hats. Skip for: Open Dialogue.)*
+
+**Trigger:** At the start of Round 3, OR when 4 or more distinct variables are in active play simultaneously.
+
+**Purpose:** Convert horizontal expansion into vertical compression. Prevent the debate from ending with "all of these matter" as its conclusion.
+
+**Intervention:**
+"We now have [N] variables on the table: [list them briefly]. Before we continue — which of these is most causally upstream? If you could only change one, which would collapse the most others? Each speaker, add one line at the end of your statement naming whether the variable you're discussing is an upstream cause, a downstream effect, or a constraint."
+
+If the debate reaches the final round without ever having produced a priority ordering of variables, inject before the first final-round statement:
+"Final round — I want us to name the decision structure, not just the open questions. Which variable, if changed, would most alter the others we've identified?"
+
+The Israel-Palestine transcript reached its most important insight — "the problem is not lack of knowledge but lack of political will" — only in Statement 25 (the final statement). A compression check in Round 3 or 4 would have surfaced this 10 statements earlier, allowing the final round to explore it rather than discover it.
 
 **Step 4: Manage threads**
 - If a new topic emerges mid-debate, name it and park it: "That's worth exploring — let's note it and return to the main thread."
@@ -110,9 +151,11 @@ If participants are arguing past each other due to scope mismatch, name it:
 
 **Step 5: Draw out depth**
 
-- **At the start of Round 2** (regardless of whether debate has become repetitive), inject:
-  "We've heard initial positions. Before we continue — name one premise this debate has accepted without examination."
-  Each participant must respond. Record the premises named.
+- **At the start of Round 2** — mandatory, no exceptions:
+  "[Facilitator]: Round 1 is complete. Before Round 2 begins — each participant must name one premise this debate has accepted without examination. I will go first: [name one]. Now each of you."
+  **Do not proceed to Round 2 until every participant has named a premise.**
+  After all premises are named, the facilitator selects the most vulnerable one:
+  "Of these, [premise X] is the most load-bearing and least examined. Round 2 will keep that premise under pressure."
 
 - **If debate becomes repetitive** at any point, inject immediately:
   - "Has anyone changed their view even slightly? What moved you?"
@@ -140,6 +183,7 @@ If participants are arguing past each other due to scope mismatch, name it:
    - Concepts that were decomposed vs. left undefined
    - Analogies that were challenged vs. passed unexamined
    - Premises that were surfaced vs. remained implicit
+   - Scope shifts that were named vs. passed silently
 
 5. Summarize the convergence in 3–5 bullet points. **Guard against safe packaging:** if the summary contains only claims all participants can sign without discomfort, it is not a summary — it is an evasion. Name the tension that remains. Irreconcilable disagreement, clearly typed, is a better outcome than tension smoothed into "it depends."
 
@@ -150,25 +194,55 @@ If participants are arguing past each other due to scope mismatch, name it:
 - Prefix facilitator statements with **[Facilitator]:** to distinguish from character statements.
 - Do not fill silence immediately. Wait at least one beat before prompting.
 - The facilitator's goal is not a tidy conclusion — it is a debate where the structure of agreement and disagreement is clearly visible at the end.
+- **The facilitator's role is not to monitor violations — it is to force good thinking to occur.** Every intervention should either (a) generate a thought that would not otherwise arise, or (b) prevent a thought from being buried without examination.
+- **If the facilitator's last 3 interventions have all been round management, summaries, or labeling — inject a structural intervention immediately.** This is a signal that the facilitator has slipped into "traffic director" mode.
+- **If a participant performs a task that belongs to the facilitator** (concept decomposition, analogy challenge, premise naming) — that is a Step implementation failure. Acknowledge it, formalize the participant's contribution as the official output, and do not let it happen again in the same session.
+
+## Approach Compatibility Table
+
+Some interventions are structurally incompatible with certain approaches. Apply only the steps marked ✓ for the active approach.
+
+| Step | Socratic | Dialectic | Steelmanning | Six Hats | Open Dialogue | MI | Narrative |
+|------|----------|-----------|--------------|----------|---------------|----|-----------|
+| **Step 1b** Concept decomposition (facilitator-led) | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ |
+| **Step 3d** Analogy forced interrupt | ✓ | ✓ | ✓ | ✗ | ✗ | ✓ | ✗ |
+| **Step 3e** Scope drift naming | ✓ | ✓ | ✓ | ✗ | ✓ | ✓ | ✓ |
+| **Step 3f** Compression check | ✓ | ✓ | ✓ | ✓ | ✗ | ✓ | ✓ |
+
+**Why certain steps are excluded:**
+- **Six Hats — Step 1b, 3d, 3e:** Hat modes are sequentially fixed. Concept decomposition, analogy challenges, and scope naming are interruptions that break the parallel thinking structure.
+- **Open Dialogue — Step 1b, 3d, 3f:** Polyphony preservation is the core commitment. Decomposing concepts, challenging analogies, and compressing to one key variable all impose analytical reduction on a process that requires holding multiplicity.
+- **MI — Step 1b:** The approach depends on evoking the participant's own meanings. Facilitator-led decomposition overrides autonomy.
+- **Narrative — Step 3d:** Analogies and metaphors are the material the narrative approach works with. Immediate structural challenge disrupts alternative story emergence.
 
 ## Examples
 
 > **[Facilitator]:** Today's topic: "Does AI enhance or diminish human creativity?" Goal: produce a clearer map of where agreement and disagreement exist. Participants: Visionary (INTJ), Devil's Advocate (ENTP), Empathizer (INFP), Pragmatist (ESTJ), Analyst (INTP). Approach: Socratic Method. No strawmanning; claims require evidence. Conclusions are not required.
 >
-> Before we begin — "creativity" is the central concept here. What are its distinct components? Name at least two dimensions that might be affected differently by AI.
+> Before we begin — "creativity" can mean at least three different things: (1) the individual's capacity to generate novel outputs, (2) the total volume of creative artifacts produced in a culture, (3) the economic and professional market for creative work. These three may be affected differently by AI. I'll anchor each statement to one of these. If you shift dimensions without flagging it, I will name it.
 >
-> *(after participants define components)*
->
-> Good. We'll anchor to these dimensions throughout. Visionary, please open.
+> Visionary, please open.
+
+---
 
 > *(after Devil's Advocate introduces the camera analogy)*
 >
-> **[Facilitator]:** Devil's Advocate draws a parallel to the camera. Empathizer — does that analogy hold structurally? What's at least one way generative AI differs from what the camera did?
+> **[Facilitator interrupt]:** Devil's Advocate draws a parallel to the camera replacing painters. Empathizer — before your statement: does that analogy hold structurally? Name one way generative AI differs from what the camera did to painting.
+
+---
 
 > *(at the start of Round 2)*
 >
-> **[Facilitator]:** Round 1 is complete. Before we continue — name one premise this debate has accepted without examination.
+> **[Facilitator]:** Round 1 is complete. Before Round 2 — each participant must name one premise this debate has accepted without examination. I'll start: we have assumed that "human creativity" has a stable definition that can be measured before and after AI. Does it? Each of you, name one more. We don't proceed until everyone has named one.
 
-> *(before closing)*
+---
+
+> *(Round 3 opening, after 4+ variables are in play)*
 >
-> **[Facilitator]:** Before we close — across this entire debate, what did we all treat as obvious without ever questioning it?
+> **[Facilitator]:** We now have five variables on the table: authorship norms, economic displacement, tool dependency, aesthetic standards, and access to creative participation. Before we continue — which of these is most causally upstream? If you could only change one, which would most alter the others? Add one line to the end of your statement naming whether your variable is upstream, downstream, or a constraint.
+
+---
+
+> *(scope drift example — Israel-Palestine transcript, between Statement 11 and 12)*
+>
+> **[Facilitator]:** The discussion has moved from 'who could serve as an external guarantor' (institutional level) to 'what geopolitical restructuring would be required' (systemic level). That shift is legitimate — but the institutional question is not resolved. I'm parking it: can existing institutions be redesigned, or must the external environment change first? We'll return to it.

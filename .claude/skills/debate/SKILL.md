@@ -10,68 +10,57 @@ description: |
 
 ## Overview
 
-**This skill is for single interactive sessions only.** For controlled experiments across multiple runs, use `/experiment` instead — it spawns isolated `debate-runner` agents that eliminate cross-session context contamination.
+Orchestrates a complete debate session by spawning a `debate-runner` agent. The agent runs in an isolated context, writes each statement immediately to disk, and returns evaluation scores when done. The main session only confirms parameters and reports results.
 
-Orchestrates a complete debate session from open to close. Reads and applies each skill file in sequence:
-1. **Setup** — confirm topic, approach, and participant configuration
-2. **Facilitation** — apply `facilitate/SKILL.md` to open and manage the session
-3. **Debate** — apply the chosen approach skill (e.g. `socratic/SKILL.md`)
-4. **Conclusion** — apply `conclude/SKILL.md` to synthesize a rational conclusion
-5. **Minutes** — apply `minutes/SKILL.md` to produce the full Japanese record
+**Do not run the debate inline.** Inline execution accumulates all statements in the main context (~10,000 words) before writing, causing slow responses. The agent approach writes each statement as it is generated and keeps the main context clean.
+
+For controlled experiments across multiple runs, use `/experiment` instead.
 
 ## Instructions
 
 **Step 1: Confirm session parameters**
 
-Ask for the topic if not provided. For all other parameters (approach, participants, rounds, session variables), use whatever the user specifies. Apply rule-file baselines for anything left unspecified — do not prompt for them.
+Ask for the topic if not provided. For all other parameters, use whatever the user specifies. Apply rule-file baselines for anything left unspecified — do not prompt for them.
 
-State the confirmed parameters and proceed without further prompting unless the user objects.
+Determine:
+- `topic`: the debate topic (exact string)
+- `approach`: skill name (default: `socratic`)
+- `participants`: character list (default: Standard 5 from `personas.md#preset-standard`)
+- `rounds`: number of rounds (default: 5)
+- `expertise_level`: Informed / Expert / Novice / Mixed (default: Informed)
+- `stakes`: Low / Medium / High / Asymmetric (default: Low)
+- `power_dynamic`: Flat / Hierarchical / Reversed (default: Flat)
+- `enneagram_overrides`: character-specific overrides or None
+- `big_five_overrides`: character-specific overrides or None
+- `date`: today's date (YYYY-MM-DD)
+- `topic_slug`: lowercase, hyphen-separated topic (e.g. `ai-job-displacement`)
+- `output_dir`: `outputs/<date>-<topic-slug>/`
 
-**Step 2: Open the session (`/facilitate` — Open)**
+State the confirmed parameters to the user, then proceed.
 
-Apply the Facilitate skill: open the session, introduce participants, state the topic and ground rules, and invite the first speaker.
+**Step 2: Spawn the debate-runner agent**
 
-**Step 3: Run the debate**
+Spawn the `debate-runner` agent with all parameters confirmed in Step 1. The agent will:
+1. Open the session (facilitator intro, ground rules, concept decomposition per `facilitate/SKILL.md`)
+2. Run all rounds (approach skill + facilitation)
+3. Close and converge
+4. Draw the conclusion
+5. Write minutes in Japanese
+6. Return evaluation scores as JSON
 
-Apply the chosen approach skill for the agreed number of rounds. The facilitator manages turn order and enforces rules throughout. Run all rounds before proceeding.
+Pass the full parameter set. Do not pass partial parameters — the agent uses baselines only for parameters not provided.
 
-After generating each statement or facilitator intervention, immediately append it to `outputs/YYYY-MM-DD-<topic-slug>/transcript.md`. Do not accumulate statements in context before writing.
+**Step 3: Report results**
 
-Append format per entry:
-```
----
-Statement N — [Speaker] ([MBTI]) — [Type] [FLAG]
-
-[Full statement text]
-```
-
-**Step 4: Close facilitation (`/facilitate` — Close)**
-
-Apply the Facilitate skill: signal the final round, prompt the convergence questions, and summarize convergence in 3–5 bullet points. Append to `transcript.md`.
-
-**Step 5: Draw the conclusion (`/conclude`)**
-
-Apply the Conclude skill immediately after convergence. Produce the three-part conclusion: Established / Conditional / Open. Append to `transcript.md`.
-
-**Step 6: Produce minutes (`/minutes`)**
-
-Read `transcript.md` in full, then apply the Minutes skill to produce the full Japanese record:
-- Executive Summary
-- Full Transcript (copied from `transcript.md` — do not regenerate from memory)
-- Statement Index
-- Key Moments
-- Convergence
-- Evaluation scores
-- Conclusion
-
-Save to `outputs/YYYY-MM-DD-<topic-slug>/minutes.md`.
+When the agent completes, report to the user:
+- Output files: `outputs/<date>-<topic-slug>/transcript.md` and `outputs/<date>-<topic-slug>/minutes.md`
+- Evaluation scores (Depth / Efficiency / Novelty / Convergence / Balance / Psychological Safety / Total)
 
 ### Behavioral Rules
-- Do not skip any stage. If a stage is skipped, state why explicitly.
-- Do not ask for confirmation between stages — run the full workflow uninterrupted unless the user intervenes.
-- If the user specifies an approach skill, use it. If not, default to `/socratic`.
-- All minutes output is in Japanese. All character names and MBTI types remain in English.
+- Never run debate steps inline. Always delegate to the debate-runner agent.
+- Do not ask for confirmation between steps — confirm parameters once, spawn agent, report results.
 - If the topic is not provided, ask once and then proceed.
+- All minutes output is in Japanese. Character names and MBTI types remain in English.
 
 ## Examples
 
@@ -79,10 +68,17 @@ Save to `outputs/YYYY-MM-DD-<topic-slug>/minutes.md`.
 
 > Session parameters confirmed:
 > - Topic: Will AI eliminate more jobs than it creates?
-> - Approach: `/dialectic`
-> - All other parameters: baseline
+> - Approach: `dialectic`
+> - Participants: Standard 5 (Visionary, Devil's Advocate, Empathizer, Pragmatist, Analyst)
+> - Rounds: 5 / Expertise: Informed / Stakes: Low / Power: Flat
+> - Output: outputs/2026-04-04-ai-job-displacement/
 >
-> Proceeding with full workflow.
+> Spawning debate-runner agent…
+
+*(agent runs in isolation, writes transcript.md and minutes.md)*
+
+> Complete.
+> - outputs/2026-04-04-ai-job-displacement/transcript.md
+> - outputs/2026-04-04-ai-job-displacement/minutes.md
 >
-> ---
-> **[Facilitator]:** Today's topic: "Will AI eliminate more jobs than it creates?" ...
+> Scores: Depth 4 / Efficiency 3 / Novelty 4 / Convergence 5 / Balance 5 / Safety 4 — Total 25/30

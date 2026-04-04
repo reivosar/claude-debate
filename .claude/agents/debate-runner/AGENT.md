@@ -3,9 +3,9 @@ name: debate-runner
 description: |
   A single-run debate agent. Executes one complete debate session in a clean context.
   Reads skill files directly and implements their logic. Saves minutes and returns evaluation scores.
-  Never called directly by users — spawned by the series-runner agent.
+  Spawned by the debate skill (single session) or the series-runner agent (experiment series).
 user-invocable: false
-allowed-tools: Read, Write, Glob
+allowed-tools: Read, Write, Edit, Glob
 ---
 
 # Debate Runner Agent
@@ -72,7 +72,7 @@ Implement `conclude/SKILL.md` in full:
 
 **Step 6: Write minutes**
 
-Read `outputs/<date>-<experiment_id>/transcript.md` in full, then implement `minutes/SKILL.md` using `templates/minutes.md`:
+Read `outputs/<date>-<experiment_id>/transcript.md` in full, then implement `minutes/SKILL.md` using `templates/minutes_ja.md`:
 - Write in Japanese.
 - Include all sections: Header (with all variable settings and experiment_id), Executive Summary, Full Transcript, Statement Index, Key Moments, Convergence, Evaluation scores, Conclusion.
 - The Full Transcript section is compiled from `transcript.md` — do not regenerate from memory.
